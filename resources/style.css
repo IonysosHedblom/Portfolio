@@ -8,6 +8,12 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* Home/Landing page section */
+
 #home {
   position: relative;
   height: 100vh;
@@ -84,11 +90,74 @@ body {
 }
 
 .btn:hover {
-  background-color: #ff726f;
-  border-color: #ff726f;
+  background-color: #3db5c5;
+  border-color: #3db5c5;
 }
 
 .btn:hover i {
   transition: 0.6s;
   transform: rotate(90deg);
+}
+
+/* About page section */
+#about {
+  height: 100vh;
+  position: relative;
+}
+
+.navigation {
+  background-color: #1b242f;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #3db5c5;
+  top: 0;
+  position: sticky;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+
+.nav-links li {
+  padding: 5px 20px;
+  font-size: 1.3rem;
+  position: relative;
+}
+
+.nav-links li a {
+  color: rgb(226, 226, 226);
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  color: #eb4863;
+}
+
+.nav-links li a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 2px;
+  position: absolute;
+  background: #e4274d;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  left: 19%;
+}
+
+.nav-links li a:hover:after {
+  width: 62.5%;
+}
+
+/* Remove this later */
+.projects {
+  margin-top: 200px;
 }
