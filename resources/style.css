@@ -137,7 +137,7 @@ a {
 }
 
 .nav-links li a:hover {
-  color: #eb4863;
+  color: #e31b6d;
 }
 
 .nav-links li a:after {
@@ -147,7 +147,7 @@ a {
   display: block;
   height: 2px;
   position: absolute;
-  background: #e4274d;
+  background: #e31b6d;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
   left: 19%;
@@ -157,7 +157,28 @@ a {
   width: 62.5%;
 }
 
-/* Remove this later */
 .projects {
-  margin-top: 200px;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  color: #444649;
+}
+
+.header-bar {
+  border-bottom: 5px solid #444649;
+  width: 120px;
+  margin: 15px auto;
+}
+
+.project-display {
+  margin: 50px auto;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
 }
