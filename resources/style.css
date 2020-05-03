@@ -125,22 +125,22 @@ a {
   justify-content: space-around;
 }
 
-.nav-links li {
+.nav-item {
   padding: 5px 20px;
   font-size: 1.3rem;
   position: relative;
 }
 
-.nav-links li a {
+.nav-item a {
   color: rgb(226, 226, 226);
   font-weight: 500;
 }
 
-.nav-links li a:hover {
+.nav-item a:hover {
   color: #e31b6d;
 }
 
-.nav-links li a:after {
+.nav-item a:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: '';
@@ -153,8 +153,25 @@ a {
   left: 19%;
 }
 
-.nav-links li a:hover:after {
+.nav-item a:hover:after {
   width: 62.5%;
+}
+
+.active {
+  color: #e31b6d;
+}
+
+.active:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 2px;
+  position: absolute;
+  background: #e31b6d;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 62.5%;
+  left: 19%;
 }
 
 .projects {

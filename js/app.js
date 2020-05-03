@@ -1,7 +1,15 @@
 import { barSlide, titleSlide, scrollTo } from './gsap.js';
+
+// GSAP animations
 const gsapSlides = () => {
   barSlide();
   titleSlide();
+};
+
+// Active links
+const activeLink = anchor => {
+  $('.navbar .active').removeClass('active');
+  $('.navbar').find('');
 };
 
 // Projects animation on scroll
@@ -24,4 +32,14 @@ $(window).scroll(() => {
 $('.btn').click(function (event) {
   event.preventDefault();
   scrollTo();
+});
+
+// Nav position
+let navPos = $('.navbar').position().top;
+let lastPos = 0;
+let lockTimer;
+$(window).on('scroll', () => {
+  let pos2 = docViewTop + 50;
+  if (pos2 > $('#home').offset().top) {
+  }
 });
