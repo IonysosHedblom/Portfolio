@@ -8,8 +8,8 @@ const gsapSlides = () => {
 
 // Active links
 const activeLink = anchor => {
-  $('.navbar .active').removeClass('active');
-  $('.navbar')
+  $('nav .active').removeClass('active');
+  $('nav')
     .find('[dest="' + anchor + '"]')
     .addClass('active');
 };
@@ -40,9 +40,14 @@ $('.btn').click(function (event) {
 let navPos = $('.navbar').position().top;
 let lastPos = 0;
 let lockTimer;
+// Link highlighting
 $(window).on('scroll', () => {
   let pos = $(window).scrollTop();
   let pos2 = pos + 50;
   if (pos2 > $('#home').offset().top) {
+    activeLink('home');
+  }
+  if (pos2 > $('#project').offset().top) {
+    activeLink('projects');
   }
 });
