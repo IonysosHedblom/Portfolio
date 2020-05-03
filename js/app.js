@@ -9,7 +9,9 @@ const gsapSlides = () => {
 // Active links
 const activeLink = anchor => {
   $('.navbar .active').removeClass('active');
-  $('.navbar').find('');
+  $('.navbar')
+    .find('[dest="' + anchor + '"]')
+    .addClass('active');
 };
 
 // Projects animation on scroll
@@ -39,7 +41,8 @@ let navPos = $('.navbar').position().top;
 let lastPos = 0;
 let lockTimer;
 $(window).on('scroll', () => {
-  let pos2 = docViewTop + 50;
+  let pos = $(window).scrollTop();
+  let pos2 = pos + 50;
   if (pos2 > $('#home').offset().top) {
   }
 });
