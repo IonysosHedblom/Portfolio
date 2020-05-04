@@ -105,8 +105,10 @@ a {
 #project {
   height: 100vh;
   position: relative;
+  background: rgb(255, 255, 255);
 }
 
+/* Navbar */
 .navigation {
   background-color: #1b242f;
   height: 50px;
@@ -170,17 +172,19 @@ a {
   left: 19%;
 }
 
-.projects {
-  text-align: center;
-  margin: 30px 0;
+/* Projects showcase */
+
+.project-section {
+  margin: 45px 0;
 }
 
-.project-title {
+.project-header {
   font-size: 2.5rem;
   font-weight: 700;
   text-transform: uppercase;
   position: relative;
   color: #444649;
+  text-align: center;
 }
 
 .header-bar {
@@ -190,8 +194,30 @@ a {
 }
 
 .project-display {
-  margin: 50px auto;
-  width: 60%;
+  margin: 100px auto;
+  width: 90vw;
   display: flex;
   justify-content: space-between;
+}
+
+.image-card {
+  height: 40vh;
+  width: 25vw;
+  border-radius: 5%;
+  border: 1px solid rgba(122, 122, 122, 0.267);
+  box-shadow: 0px 8px 10px 5px rgba(143, 143, 143, 0.384),
+    -10px 8px 15px 5px rgba(143, 143, 143, 0.384),
+    10px 8px 15px 5px rgba(143, 143, 143, 0.384);
+}
+
+#devsite {
+  background-image: url('./img/devsitesmall.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#shelf {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url('./img/shelfpic.png');
 }
