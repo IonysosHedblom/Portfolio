@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #e2e2e2;
+  font-weight: 500;
+}
+
+/* Home/Landing page section */
+#home {
+  position: relative;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  -webkit-filter: grayscale(30%);
+          filter: grayscale(30%);
+  opacity: 0.7;
+}
+
+.image-container:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.849);
+}
+
+.content {
+  z-index: 10;
+}
+
+.intro h1 {
+  font-weight: 300;
+  font-size: 2.8rem;
+  color: #e2e2e2;
+}
+
+.name {
+  color: #dc143c;
+  font-weight: 500;
+}
+
+.btn-home {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7em 1.6em;
+  border: 0.1em solid #e2e2e2;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.btn i {
+  padding-left: 10px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.btn:hover {
+  background-color: #3db5c5;
+  border-color: #3db5c5;
+}
+
+.btn:hover i {
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+/* About page section */
+#project {
+  height: 100vh;
+  position: relative;
+  background: white;
+}
+
+/* Navbar */
+.navigation {
+  background-color: #1b242f;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid #3db5c5;
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.nav-item {
+  padding: 5px 20px;
+  font-size: 1.3rem;
+  position: relative;
+}
+
+.nav-item:hover {
+  color: #e31b6d;
+}
+
+.nav-item:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 2px;
+  position: absolute;
+  background: #e31b6d;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  left: 19%;
+}
+
+.nav-item:hover:after {
+  width: 62.5%;
+}
+
+.active {
+  color: #e31b6d;
+}
+
+.active:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 2px;
+  position: absolute;
+  background: #e31b6d;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 62.5%;
+  left: 19%;
+}
+
+/* Projects showcase */
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex.row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.flex.wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.project-section {
+  margin: 45px 0;
+}
+
+.project-header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  color: #444649;
+  text-align: center;
+}
+
+.header-bar {
+  border-bottom: 6px solid #444649;
+  width: 250px;
+  margin: 10px auto;
+}
+
+#gallery {
+  margin: 150px 0;
+}
+
+#gallery .text,
+#gallery .btn-gallery {
+  z-index: 2;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #1b242f;
+  opacity: 0;
+}
+
+#gallery .btn-gallery {
+  display: inline-block;
+  padding: 0.7em 1.6em;
+  border: 0.1em solid #a1a1a1;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.4em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: 300;
+  color: #e31b6d;
+  text-align: center;
+}
+
+#gallery .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#gallery .mix {
+  position: relative;
+  display: none;
+}
+
+#gallery .mix .waypoint {
+  background: #fff;
+}
+
+#gallery .mix .card {
+  margin: 0 30px;
+  height: 35vh;
+  max-width: 100%;
+  width: calc(26vw - 10px);
+  cursor: pointer;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  border-radius: 0.4em;
+  -webkit-box-shadow: 0px 8px 13px 14px rgba(190, 190, 190, 0.199), -10px 8px 18px 14px rgba(190, 190, 190, 0.199), 10px 8px 18px 14px rgba(190, 190, 190, 0.199);
+          box-shadow: 0px 8px 13px 14px rgba(190, 190, 190, 0.199), -10px 8px 18px 14px rgba(190, 190, 190, 0.199), 10px 8px 18px 14px rgba(190, 190, 190, 0.199);
+}
+
+#gallery .mix:hover .text {
+  opacity: 1;
+  top: 24%;
+}
+
+#gallery .mix:hover .btn-gallery {
+  opacity: 1;
+}
+
+#gallery #devsite {
+  background-image: url("../../img/gallery/thumb-1.jpg");
+  background-size: 100% 100%;
+}
+
+#gallery #shelf {
+  background-image: url("../../img/gallery/thumb-2.jpg");
+  background-size: 100% 100%;
+}
+
+#gallery #tail {
+  background-image: url("../../img/gallery/thumb-3.jpg");
+  background-size: 100% 100%;
+}
+
+@media screen and (max-width: 414px) {
+  #gallery .mix .card {
+    width: 70vw;
+    height: 30vh;
+  }
+}

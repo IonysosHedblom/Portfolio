@@ -1,3 +1,17 @@
+@mixin pos(
+  $pos: absolute,
+  $top: null,
+  $left: null,
+  $bottom: null,
+  $right: null
+) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: $pos;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -117,6 +131,7 @@ a {
   border-bottom: 2px solid #3db5c5;
   top: 0;
   position: sticky;
+  z-index: 1;
 }
 
 .navbar {
@@ -174,6 +189,21 @@ a {
 
 /* Projects showcase */
 
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &.row {
+    flex-direction: row;
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+}
+
 .project-section {
   margin: 45px 0;
 }
@@ -193,34 +223,88 @@ a {
   margin: 10px auto;
 }
 
-/* Gallery */
+#gallery {
+  margin: 150px 0;
 
-/* .project-display {
-  margin: 100px auto;
-  width: 90vw;
-  display: flex;
-  justify-content: space-between;
+  .text,
+  .btn-gallery {
+    z-index: 2;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    color: #1b242f;
+    opacity: 0;
+  }
+
+  .btn-gallery {
+    display: inline-block;
+    padding: 0.7em 1.6em;
+    border: 0.1em solid rgb(161, 161, 161);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.4em;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: 300;
+    color: #e31b6d;
+    text-align: center;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .mix {
+    position: relative;
+    display: none;
+
+    .waypoint {
+      background: #fff;
+    }
+
+    .card {
+      margin: 0 30px;
+      height: 35vh;
+      max-width: 100%;
+      width: calc(26vw - 10px);
+      cursor: pointer;
+      transition: opacity 0.5s;
+      border-radius: 0.4em;
+      box-shadow: 0px 8px 13px 14px rgba(190, 190, 190, 0.199),
+        -10px 8px 18px 14px rgba(190, 190, 190, 0.199),
+        10px 8px 18px 14px rgba(190, 190, 190, 0.199);
+    }
+
+    &:hover {
+      .text {
+        opacity: 1;
+        top: 24%;
+      }
+      .btn-gallery {
+        opacity: 1;
+      }
+    }
+  }
+
+  #devsite {
+    background-image: url('../../img/gallery/thumb-1.jpg');
+    background-size: 100% 100%;
+  }
+
+  #shelf {
+    background-image: url('../../img/gallery/thumb-2.jpg');
+    background-size: 100% 100%;
+  }
+
+  #tail {
+    background-image: url('../../img/gallery/thumb-3.jpg');
+    background-size: 100% 100%;
+  }
 }
 
-.image-card {
-  height: 40vh;
-  width: 25vw;
-  border-radius: 5%;
-  border: 1px solid rgba(122, 122, 122, 0.267);
-  box-shadow: 0px 8px 10px 5px rgba(143, 143, 143, 0.384),
-    -10px 8px 15px 5px rgba(143, 143, 143, 0.384),
-    10px 8px 15px 5px rgba(143, 143, 143, 0.384);
+@media screen and (max-width: 414px) {
+  #gallery .mix .card {
+    width: 70vw;
+    height: 30vh;
+  }
 }
-
-#devsite {
-  background-image: url('./img/devsitesmall.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-
-#shelf {
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-image: url('./img/shelfpic.png');
-}
- */

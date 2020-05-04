@@ -51,3 +51,12 @@ $(window).on('scroll', () => {
     activeLink('projects');
   }
 });
+
+// GALLERY
+$('#gallery').mixItUp({});
+
+const clearMix = () => {
+  setTimeout(() => {
+    $('#gallery').removeClass('waypoint');
+  }, 2000);
+};
