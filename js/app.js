@@ -52,6 +52,16 @@ $(window).on('scroll', () => {
   }
 });
 
+//Prevent hovering on scroll
+clearTimeout(lockTimer);
+if (!$('body').hasClass('disable-hover')) {
+  $('body').addClass('disable-hover');
+}
+
+lockTimer = setTimeout(() => {
+  $('body').removeClass('disable-hover');
+}, 500);
+
 // GALLERY
 $('#gallery').mixItUp({});
 

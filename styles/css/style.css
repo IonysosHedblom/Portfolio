@@ -9,6 +9,10 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+.disable-hover {
+  pointer-events: none;
+}
+
 a {
   text-decoration: none;
   color: #e2e2e2;
@@ -118,7 +122,7 @@ a {
 #project {
   height: 100vh;
   position: relative;
-  background: white;
+  background: whitesmoke;
 }
 
 /* Navbar */
@@ -235,12 +239,12 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   position: relative;
-  color: #444649;
+  color: #1b242f;
   text-align: center;
 }
 
 .header-bar {
-  border-bottom: 6px solid #444649;
+  border-bottom: 6px solid #1b242f;
   width: 250px;
   margin: 10px auto;
 }
@@ -249,38 +253,37 @@ a {
   margin: 150px 0;
 }
 
-#gallery .text,
-#gallery .btn-gallery {
+#gallery .text {
+  margin: 30px 0;
   z-index: 2;
   text-align: center;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   color: #1b242f;
-  opacity: 0;
+}
+
+#gallery .text .bold {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+#gallery .text .highlight {
+  color: #e31b6d;
 }
 
 #gallery .btn-gallery {
+  z-index: 2;
   display: inline-block;
   padding: 0.7em 1.6em;
-  border: 0.1em solid #a1a1a1;
+  border: 0.125em solid #1b242f;
   margin: 0 0.3em 0.3em 0;
   border-radius: 0.4em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-decoration: none;
-  font-weight: 300;
-  color: #e31b6d;
-  text-align: center;
-}
-
-#gallery .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  font-weight: 600;
+  color: #1b242f;
 }
 
 #gallery .mix {
@@ -290,6 +293,11 @@ a {
 
 #gallery .mix .waypoint {
   background: #fff;
+}
+
+#gallery .mix .btn-gallery:hover {
+  border-color: #e31b6d;
+  background: #e31b6d;
 }
 
 #gallery .mix .card {
@@ -305,13 +313,29 @@ a {
           box-shadow: 0px 8px 13px 14px rgba(190, 190, 190, 0.199), -10px 8px 18px 14px rgba(190, 190, 190, 0.199), 10px 8px 18px 14px rgba(190, 190, 190, 0.199);
 }
 
+#gallery .mix .buttons {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  z-index: 5;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#gallery .mix:hover .card {
+  opacity: 0.2;
+}
+
 #gallery .mix:hover .text {
-  opacity: 1;
   top: 24%;
 }
 
-#gallery .mix:hover .btn-gallery {
+#gallery .mix:hover .buttons {
   opacity: 1;
+  bottom: 52%;
 }
 
 #gallery #devsite {
@@ -330,8 +354,14 @@ a {
 }
 
 @media screen and (max-width: 414px) {
+  #project {
+    height: 100%;
+  }
+  #gallery {
+    margin: 0 auto;
+  }
   #gallery .mix .card {
     width: 70vw;
-    height: 30vh;
+    height: 25vh;
   }
 }
