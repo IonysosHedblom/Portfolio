@@ -275,7 +275,7 @@ a {
   z-index: 2;
   display: inline-block;
   padding: 0.7em 1.6em;
-  border: 0.1em solid #1b242f;
+  border: 0.1em solid #1b242f79;
   margin: 0 0.3em 0.3em 0;
   border-radius: 0.4em;
   -webkit-box-sizing: border-box;
@@ -283,7 +283,7 @@ a {
   font-size: 1.2rem;
   text-decoration: none;
   background-color: #3db5c560;
-  font-weight: 600;
+  font-weight: 500;
   color: #1b242f;
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
@@ -299,7 +299,7 @@ a {
 }
 
 #gallery .mix .btn-gallery:hover {
-  background: rgba(98, 219, 235, 0.774);
+  background: #3db5c58c;
   padding: 0.6em 1.5em;
 }
 

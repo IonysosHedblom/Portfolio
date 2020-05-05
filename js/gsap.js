@@ -22,5 +22,5 @@ export const scrollTo = () => {
 export const cardSlide = () => {
   gsap
     .timeline()
-    .from('#gallery .mix', { stagger: 0.3, y: 500, duration: 1.2, opacity: 0 });
+    .from('#gallery .mix', { stagger: 0.3, y: 500, duration: 1.1, opacity: 0 });
 };
