@@ -51,17 +51,17 @@ $(window).on('scroll', () => {
   if (pos2 > $('#project').offset().top) {
     activeLink('projects');
   }
+
+  //Prevent hovering on scroll
+  clearTimeout(lockTimer);
+  if (!$('body').hasClass('disable-hover')) {
+    $('body').addClass('disable-hover');
+  }
+
+  lockTimer = setTimeout(() => {
+    $('body').removeClass('disable-hover');
+  }, 500);
 });
-
-//Prevent hovering on scroll
-clearTimeout(lockTimer);
-if (!$('body').hasClass('disable-hover')) {
-  $('body').addClass('disable-hover');
-}
-
-lockTimer = setTimeout(() => {
-  $('body').removeClass('disable-hover');
-}, 500);
 
 // GALLERY
 $('#gallery').mixItUp({});

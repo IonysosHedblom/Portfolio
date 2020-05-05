@@ -118,13 +118,6 @@ a {
           transform: rotate(90deg);
 }
 
-/* About page section */
-#project {
-  height: 100vh;
-  position: relative;
-  background: whitesmoke;
-}
-
 /* Navbar */
 .navigation {
   background-color: #1b242f;
@@ -202,6 +195,12 @@ a {
 }
 
 /* Projects showcase */
+#project {
+  height: 100vh;
+  position: relative;
+  background: whitesmoke;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -250,7 +249,7 @@ a {
 }
 
 #gallery {
-  margin: 150px 0;
+  margin: 110px 0;
 }
 
 #gallery .text {
@@ -354,6 +353,10 @@ a {
 #gallery #tail {
   background-image: url("../../img/gallery/thumb-3.jpg");
   background-size: 100% 100%;
+}
+
+#about {
+  height: 100vh;
 }
 
 @media screen and (max-width: 414px) {
