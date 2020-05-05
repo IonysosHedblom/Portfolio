@@ -1,10 +1,10 @@
-import { barSlide, titleSlide, scrollTo, gallerySlide } from './gsap.js';
+import { barSlide, titleSlide, scrollTo, cardSlide } from './gsap.js';
 
 // GSAP Animations
 const gsapSlides = () => {
   barSlide();
   titleSlide();
-  gallerySlide();
+  cardSlide();
 };
 
 // Active links
