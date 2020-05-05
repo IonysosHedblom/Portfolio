@@ -136,7 +136,7 @@ a {
   height: 50px;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid $secondary-blue;
+  border-bottom: 2.5px solid $secondary-blue;
   top: 0;
   position: sticky;
   z-index: 1;
@@ -254,14 +254,16 @@ a {
     z-index: 2;
     display: inline-block;
     padding: 0.7em 1.6em;
-    border: 0.125em solid $primary-dark;
+    border: 0.1em solid $primary-dark;
     margin: 0 0.3em 0.3em 0;
     border-radius: 0.4em;
     box-sizing: border-box;
     font-size: 1.2rem;
     text-decoration: none;
+    background-color: #3db5c560;
     font-weight: 600;
     color: $primary-dark;
+    transition: all 0.15s ease;
   }
 
   .mix {
@@ -274,8 +276,8 @@ a {
 
     .btn-gallery {
       &:hover {
-        border-color: $primary-red;
-        background: $primary-red;
+        background: rgba(98, 219, 235, 0.774);
+        padding: 0.6em 1.5em;
       }
     }
 
