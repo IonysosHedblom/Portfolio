@@ -1,10 +1,23 @@
-import { barSlide, titleSlide, scrollTo, cardSlide } from './gsap.js';
+import {
+  barSlide,
+  titleSlide,
+  scrollTo,
+  cardSlide,
+  aboutBarSlide,
+  aboutHeaderSlide,
+} from './gsap.js';
 
-// GSAP Animations
+// GSAP Animations on project section
 const gsapSlides = () => {
   barSlide();
   titleSlide();
   cardSlide();
+};
+
+// GSAP animations on about section
+const sliding = () => {
+  aboutBarSlide();
+  aboutHeaderSlide();
 };
 
 // Active links
@@ -17,17 +30,32 @@ const activeLink = anchor => {
 
 // Projects animation on scroll
 const projects = $('.projects');
-let triggered = false;
+const about = $('.about');
+let triggeredProject = false;
+let triggeredAbout = false;
 
 $(window).scroll(() => {
   const docViewTop = $(window).scrollTop();
   const docViewBottom = docViewTop + $(window).height();
   const elemTop = $(projects).offset().top;
   const elemBottom = elemTop + $(projects).height();
-  if (!triggered && elemBottom <= docViewBottom && elemTop >= docViewTop) {
+  const aboutTop = $(about).offset().top;
+  const aboutBottom = aboutTop + $(about).height();
+  if (
+    !triggeredProject &&
+    elemBottom <= docViewBottom &&
+    elemTop >= docViewTop
+  ) {
     gsapSlides();
-    console.log('It works!');
-    triggered = true;
+    triggeredProject = true;
+  }
+  if (
+    !triggeredAbout &&
+    aboutBottom <= docViewBottom &&
+    aboutTop >= docViewTop
+  ) {
+    sliding();
+    triggeredAbout = true;
   }
 });
 
