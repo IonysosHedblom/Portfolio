@@ -14,8 +14,8 @@ export const scrollTo = () => {
 
 // About section header animations
 export const aboutBarSlide = () => {
-  gsap.from('.about-bar', { duration: 1, y: 50, x: -130, opacity: 0 });
-  gsap.to('.about-bar', { duration: 1, x: 0, opacity: 1 });
+  gsap.from('.about-bar', { duration: 0.8, y: 50, x: -130, opacity: 0 });
+  gsap.to('.about-bar', { duration: 0.8, x: 0, opacity: 1 });
 };
 export const aboutHeaderSlide = () => {
   gsap.from('.about-header', { duration: 1, x: 150, opacity: 0 });
@@ -31,5 +31,14 @@ export const aboutHeaderSlide = () => {
 export const cardSlide = () => {
   gsap
     .timeline()
-    .from('#gallery .mix', { stagger: 0.3, y: 500, duration: 1, opacity: 0 });
+    .from('#gallery .mix', { stagger: 0.2, y: 500, duration: 0.8, opacity: 0 });
+};
+
+export const hexSlide = () => {
+  gsap.timeline().from('.label-wrap .bullet-wrap', {
+    stagger: 0.2,
+    x: -220,
+    duration: 1,
+    opacity: 0,
+  });
 };

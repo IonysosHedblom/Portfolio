@@ -5,6 +5,7 @@ import {
   cardSlide,
   aboutBarSlide,
   aboutHeaderSlide,
+  hexSlide,
 } from './gsap.js';
 
 // GSAP Animations on project section
@@ -12,6 +13,7 @@ const gsapSlides = () => {
   barSlide();
   titleSlide();
   cardSlide();
+  hexSlide();
 };
 
 // GSAP animations on about section
