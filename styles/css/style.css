@@ -282,6 +282,7 @@ a {
   margin: 20px 0 10px 0;
   font-size: 1.25rem;
   font-weight: 500;
+  color: #1b242fb0;
 }
 
 #project .bullet-wrap {
@@ -306,6 +307,7 @@ a {
 
 #project .highlight {
   font-size: 1rem;
+  color: #1b242fb0;
 }
 
 .project-section {
@@ -318,6 +320,7 @@ a {
   text-transform: uppercase;
   position: relative;
   color: #1b242f;
+  letter-spacing: 1px;
   text-align: center;
 }
 
@@ -451,6 +454,7 @@ a {
   position: relative;
   color: #1b242f;
   text-align: center;
+  letter-spacing: 1px;
   opacity: 0;
 }
 
@@ -459,6 +463,62 @@ a {
   width: 185px;
   margin: 10px auto;
   opacity: 0;
+}
+
+#about .header-secondary {
+  margin: 20px 70px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: #1b242fee;
+}
+
+#about .row {
+  max-width: 80%;
+  margin: 100px auto;
+  position: relative;
+}
+
+#about .row .column {
+  width: 40vw;
+  margin: 20px 0;
+}
+
+#about .row .column .text-header {
+  font-size: 1.5rem;
+  margin: 25px 0;
+  color: #1b242f;
+}
+
+#about .row .column .bread {
+  color: #1b242fb0;
+}
+
+#about .row .column-stack .stack {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: 90%;
+  top: 0;
+}
+
+#about .row .column-stack .hex-wrap {
+  margin: 10px 0;
+}
+
+#about .row .column-stack .hex-wrap .hexagon i {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  font-size: 1.6rem;
+  z-index: 1;
+  color: #fff;
 }
 
 @media screen and (max-width: 414px) {

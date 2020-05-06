@@ -1,5 +1,6 @@
 $primary-red: #e31b6d;
 $primary-dark: #1b242f;
+$secondary-dark: #1b242fb0;
 $secondary-blue: #3db5c5;
 
 @mixin pos(
@@ -259,6 +260,7 @@ a {
       margin: 20px 0 10px 0;
       font-size: 1.25rem;
       font-weight: 500;
+      color: $secondary-dark;
     }
   }
 
@@ -282,6 +284,7 @@ a {
 
   .highlight {
     font-size: 1rem;
+    color: $secondary-dark;
   }
 }
 
@@ -295,6 +298,7 @@ a {
   text-transform: uppercase;
   position: relative;
   color: $primary-dark;
+  letter-spacing: 1px;
   text-align: center;
 }
 
@@ -312,7 +316,7 @@ a {
     z-index: 2;
     text-align: center;
     transition: all 0.3s ease-in-out;
-    color: #1b242f;
+    color: $primary-dark;
     .bold {
       font-size: 1.5rem;
       font-weight: 500;
@@ -421,6 +425,7 @@ a {
     position: relative;
     color: $primary-dark;
     text-align: center;
+    letter-spacing: 1px;
     opacity: 0;
   }
   .about-bar {
@@ -428,6 +433,58 @@ a {
     width: 185px;
     margin: 10px auto;
     opacity: 0;
+  }
+
+  .header-secondary {
+    margin: 20px 70px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: #1b242fee;
+  }
+
+  .row {
+    max-width: 80%;
+    margin: 100px auto;
+    position: relative;
+
+    .column {
+      width: 40vw;
+      margin: 20px 0;
+
+      .text-header {
+        font-size: 1.5rem;
+        margin: 25px 0;
+        color: $primary-dark;
+      }
+
+      .bread {
+        color: $secondary-dark;
+      }
+    }
+
+    .column-stack {
+      .stack {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        left: 90%;
+        top: 0;
+      }
+      .hex-wrap {
+        margin: 10px 0;
+
+        .hexagon i {
+          position: absolute;
+          top: 30%;
+          left: 0;
+          right: 0;
+          font-size: 1.6rem;
+          z-index: 1;
+          color: #fff;
+        }
+      }
+    }
   }
 }
 

@@ -14,11 +14,11 @@ export const scrollTo = () => {
 
 // About section header animations
 export const aboutBarSlide = () => {
-  gsap.from('.about-bar', { duration: 0.8, y: 50, x: -130, opacity: 0 });
+  gsap.from('.about-bar', { duration: 0.8, x: 130, opacity: 0 });
   gsap.to('.about-bar', { duration: 0.8, x: 0, opacity: 1 });
 };
 export const aboutHeaderSlide = () => {
-  gsap.from('.about-header', { duration: 1, x: 150, opacity: 0 });
+  gsap.from('.about-header', { duration: 1, x: -130, opacity: 0 });
   gsap.to('.about-header', { duration: 1, x: 0, opacity: 1 });
 };
 /* export const gallerySlide = () => {
