@@ -413,9 +413,10 @@ a {
   height: 100vh;
   background: #fff;
   position: relative;
+  overflow: hidden;
 
   .about-section {
-    padding: 25px 0 0 0;
+    padding: 40px 0 0 0;
   }
 
   .about-header {
@@ -436,7 +437,7 @@ a {
   }
 
   .header-secondary {
-    margin: 20px 70px;
+    margin: 70px 90px;
     font-size: 1.6rem;
     font-weight: 400;
     letter-spacing: 0.5px;
@@ -444,22 +445,24 @@ a {
   }
 
   .row {
-    max-width: 80%;
-    margin: 100px auto;
+    max-width: 85%;
+    margin: 70px auto;
     position: relative;
 
     .column {
       width: 40vw;
-      margin: 20px 0;
+      margin: 10px 0;
 
       .text-header {
         font-size: 1.5rem;
-        margin: 25px 0;
+        margin: 12px 0;
         color: $primary-dark;
       }
 
       .bread {
         color: $secondary-dark;
+        font-size: 1.2rem;
+        margin: 0 0 40px 0;
       }
     }
 
@@ -467,22 +470,99 @@ a {
       .stack {
         position: absolute;
         display: flex;
-        flex-direction: column;
-        left: 90%;
+        left: 660px;
         top: 0;
       }
       .hex-wrap {
-        margin: 10px 0;
+        margin: 0 50px;
 
-        .hexagon i {
-          position: absolute;
-          top: 30%;
-          left: 0;
-          right: 0;
-          font-size: 1.6rem;
-          z-index: 1;
-          color: #fff;
+        .stack-img img {
+          height: 150px;
+          width: 150px;
         }
+      }
+    }
+
+    .skills {
+      position: absolute;
+      left: 890px;
+      top: 42%;
+      text-align: center;
+
+      .skills-header {
+        font-size: 1.6rem;
+        margin: 25px 0;
+        color: $secondary-dark;
+      }
+
+      .skill-list {
+        color: $secondary-dark;
+        font-size: 1.2rem;
+        list-style: none;
+
+        .skill-item {
+          margin: 15px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  #about {
+    .row {
+      .column-stack {
+        .stack {
+          left: 500px;
+        }
+      }
+      .skills {
+        left: 730px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  #about {
+    .row {
+      .column-stack {
+        .stack {
+          left: 770px;
+        }
+      }
+      .skills {
+        left: 1000px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1900px) {
+  #about {
+    .row {
+      .column-stack {
+        .stack {
+          left: 970px;
+        }
+      }
+      .skills {
+        left: 1200px;
+      }
+    }
+  }
+}
+
+@media (min-width: 2200px) {
+  #about {
+    .row {
+      .column-stack {
+        .stack {
+          left: 1370px;
+        }
+      }
+      .skills {
+        left: 1600px;
       }
     }
   }
@@ -518,5 +598,27 @@ a {
   #gallery .mix .card {
     width: 65vw;
     height: 25vh;
+  }
+
+  #about {
+    height: 100%;
+
+    .header-secondary {
+      margin: 40px 10px;
+    }
+
+    .row {
+      margin: 10px 20px;
+      width: 100%;
+      .column {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      .column-stack {
+        display: none;
+        position: relative;
+      }
+    }
   }
 }

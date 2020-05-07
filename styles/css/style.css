@@ -441,10 +441,11 @@ a {
   height: 100vh;
   background: #fff;
   position: relative;
+  overflow: hidden;
 }
 
 #about .about-section {
-  padding: 25px 0 0 0;
+  padding: 40px 0 0 0;
 }
 
 #about .about-header {
@@ -466,7 +467,7 @@ a {
 }
 
 #about .header-secondary {
-  margin: 20px 70px;
+  margin: 70px 90px;
   font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 0.5px;
@@ -474,24 +475,26 @@ a {
 }
 
 #about .row {
-  max-width: 80%;
-  margin: 100px auto;
+  max-width: 85%;
+  margin: 70px auto;
   position: relative;
 }
 
 #about .row .column {
   width: 40vw;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 #about .row .column .text-header {
   font-size: 1.5rem;
-  margin: 25px 0;
+  margin: 12px 0;
   color: #1b242f;
 }
 
 #about .row .column .bread {
   color: #1b242fb0;
+  font-size: 1.2rem;
+  margin: 0 0 40px 0;
 }
 
 #about .row .column-stack .stack {
@@ -499,26 +502,76 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  left: 90%;
+  left: 660px;
   top: 0;
 }
 
 #about .row .column-stack .hex-wrap {
-  margin: 10px 0;
+  margin: 0 50px;
 }
 
-#about .row .column-stack .hex-wrap .hexagon i {
+#about .row .column-stack .hex-wrap .stack-img img {
+  height: 150px;
+  width: 150px;
+}
+
+#about .row .skills {
   position: absolute;
-  top: 30%;
-  left: 0;
-  right: 0;
+  left: 890px;
+  top: 42%;
+  text-align: center;
+}
+
+#about .row .skills .skills-header {
   font-size: 1.6rem;
-  z-index: 1;
-  color: #fff;
+  margin: 25px 0;
+  color: #1b242fb0;
+}
+
+#about .row .skills .skill-list {
+  color: #1b242fb0;
+  font-size: 1.2rem;
+  list-style: none;
+}
+
+#about .row .skills .skill-list .skill-item {
+  margin: 15px 0;
+}
+
+@media (max-width: 1300px) {
+  #about .row .column-stack .stack {
+    left: 500px;
+  }
+  #about .row .skills {
+    left: 730px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #about .row .column-stack .stack {
+    left: 770px;
+  }
+  #about .row .skills {
+    left: 1000px;
+  }
+}
+
+@media (min-width: 1900px) {
+  #about .row .column-stack .stack {
+    left: 970px;
+  }
+  #about .row .skills {
+    left: 1200px;
+  }
+}
+
+@media (min-width: 2200px) {
+  #about .row .column-stack .stack {
+    left: 1370px;
+  }
+  #about .row .skills {
+    left: 1600px;
+  }
 }
 
 @media screen and (max-width: 414px) {
@@ -547,5 +600,23 @@ a {
   #gallery .mix .card {
     width: 65vw;
     height: 25vh;
+  }
+  #about {
+    height: 100%;
+  }
+  #about .header-secondary {
+    margin: 40px 10px;
+  }
+  #about .row {
+    margin: 10px 20px;
+    width: 100%;
+  }
+  #about .row .column {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #about .row .column-stack {
+    display: none;
+    position: relative;
   }
 }

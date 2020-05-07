@@ -81,6 +81,12 @@ $(window).on('scroll', () => {
   if (pos2 > $('#project').offset().top) {
     activeLink('projects');
   }
+  if (pos2 > $('#about').offset().top) {
+    activeLink('about');
+  }
+  if (pos2 > $('#contact').offset().top) {
+    activeLink('contact');
+  }
 
   //Prevent hovering on scroll
   clearTimeout(lockTimer);
