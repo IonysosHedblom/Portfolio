@@ -538,9 +538,9 @@ a {
       margin: 50px 90px;
 
       .form-header {
-        color: $primary-light;
-        font-size: 1.5rem;
-        margin: 50px 130px;
+        color: $secondary-blue;
+        font-size: 1.8rem;
+        margin: 40px 110px;
       }
 
       label {
@@ -557,6 +557,35 @@ a {
         padding: 10px 15px;
         margin: 5px 0 20px 0;
         background-color: #343d49fd;
+        color: $primary-light;
+        font-size: 1rem;
+      }
+      .btn-contact {
+        margin: 10px 0 0 120px;
+        font-size: 1.3rem;
+        padding: 10px 30px;
+        color: $primary-light;
+        background: transparent;
+        outline: 0;
+        border-radius: 0.4rem;
+        cursor: pointer;
+
+        &:hover {
+          background: $secondary-blue;
+          border-color: #37808a8c;
+        }
+      }
+
+      #success {
+        height: 0;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        transition: height 0.25s;
+
+        &.expand {
+          height: 36px;
+        }
       }
     }
   }
@@ -609,7 +638,7 @@ a {
   }
 }
 
-@media (min-width: 2200px) {
+@media (min-width: 2400px) {
   #about {
     .header-secondary {
       font-size: 2rem;

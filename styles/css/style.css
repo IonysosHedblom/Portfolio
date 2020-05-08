@@ -567,9 +567,9 @@ a {
 }
 
 #contact .row .contact-form .form-header {
-  color: #e2e2e2;
-  font-size: 1.5rem;
-  margin: 50px 130px;
+  color: #3db5c5;
+  font-size: 1.8rem;
+  margin: 40px 110px;
 }
 
 #contact .row .contact-form label {
@@ -587,6 +587,37 @@ a {
   padding: 10px 15px;
   margin: 5px 0 20px 0;
   background-color: #343d49fd;
+  color: #e2e2e2;
+  font-size: 1rem;
+}
+
+#contact .row .contact-form .btn-contact {
+  margin: 10px 0 0 120px;
+  font-size: 1.3rem;
+  padding: 10px 30px;
+  color: #e2e2e2;
+  background: transparent;
+  outline: 0;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+#contact .row .contact-form .btn-contact:hover {
+  background: #3db5c5;
+  border-color: #37808a8c;
+}
+
+#contact .row .contact-form #success {
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: height 0.25s;
+  transition: height 0.25s;
+}
+
+#contact .row .contact-form #success.expand {
+  height: 36px;
 }
 
 @media (max-width: 1300px) {
@@ -616,7 +647,7 @@ a {
   }
 }
 
-@media (min-width: 2200px) {
+@media (min-width: 2400px) {
   #about .header-secondary {
     font-size: 2rem;
     margin: 100px 120px;
