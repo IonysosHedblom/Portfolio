@@ -533,6 +533,32 @@ a {
   .row {
     max-width: 85%;
     position: relative;
+
+    .contact-form {
+      margin: 50px 90px;
+
+      .form-header {
+        color: $primary-light;
+        font-size: 1.5rem;
+        margin: 50px 130px;
+      }
+
+      label {
+        color: $primary-light;
+        font-size: 1.2rem;
+      }
+      input[type='text'],
+      input[type='email'],
+      textarea {
+        display: block;
+        width: 400px;
+        outline: none;
+        border: 0;
+        padding: 10px 15px;
+        margin: 5px 0 20px 0;
+        background-color: #343d49fd;
+      }
+    }
   }
 }
 

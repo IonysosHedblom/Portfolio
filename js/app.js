@@ -96,7 +96,7 @@ $(window).on('scroll', () => {
 
   lockTimer = setTimeout(() => {
     $('body').removeClass('disable-hover');
-  }, 500);
+  }, 200);
 });
 
 // GALLERY
