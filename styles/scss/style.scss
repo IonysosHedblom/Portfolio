@@ -513,6 +513,7 @@ a {
   height: 100vh;
   position: relative;
   background-color: $primary-dark;
+  overflow: hidden;
 
   .contact-header {
     padding: 25px 0 0 0;
@@ -533,11 +534,11 @@ a {
   .row {
     max-width: 85%;
     position: relative;
+    margin: 100px auto;
 
     .contact-form {
-      position: absolute;
-      right: 60%;
-      margin: 50px 0;
+      margin: 10px 0;
+      width: 40vw;
 
       .form-header {
         color: $secondary-blue;
@@ -593,7 +594,7 @@ a {
     .contact-social {
       position: absolute;
       top: 210px;
-      left: 70%;
+      left: 60%;
       display: flex;
       overflow: hidden;
       text-align: center;
@@ -615,7 +616,7 @@ a {
   .madeby {
     color: $primary-light;
     text-align: center;
-    bottom: 0;
+    bottom: 200px;
   }
 }
 

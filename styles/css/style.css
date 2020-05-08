@@ -539,6 +539,7 @@ a {
   height: 100vh;
   position: relative;
   background-color: #1b242f;
+  overflow: hidden;
 }
 
 #contact .contact-header {
@@ -560,12 +561,12 @@ a {
 #contact .row {
   max-width: 85%;
   position: relative;
+  margin: 100px auto;
 }
 
 #contact .row .contact-form {
-  position: absolute;
-  right: 60%;
-  margin: 50px 0;
+  margin: 10px 0;
+  width: 40vw;
 }
 
 #contact .row .contact-form .form-header {
@@ -625,7 +626,7 @@ a {
 #contact .row .contact-social {
   position: absolute;
   top: 210px;
-  left: 70%;
+  left: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -649,7 +650,7 @@ a {
 #contact .madeby {
   color: #e2e2e2;
   text-align: center;
-  bottom: 0;
+  bottom: 200px;
 }
 
 @media (max-width: 1300px) {
