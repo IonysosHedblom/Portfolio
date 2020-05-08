@@ -881,3 +881,19 @@ a {
     display: none;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .flex .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #project #gallery {
+    margin: 150px 0 0 0;
+  }
+  #project #gallery .mix .card {
+    width: 35vw;
+    height: 20vh;
+  }
+}

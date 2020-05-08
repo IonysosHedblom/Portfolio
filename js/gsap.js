@@ -109,7 +109,7 @@ export const skillSlide = () => {
 // Contact section slides
 
 export const formSlide = () => {
-  gsap.from('.contact-form', { duration: 1.3, x: -260, opacity: 0 });
+  gsap.from('.contact-form', { duration: 1.3, x: -280, opacity: 0 });
   gsap.to('.contact-form', { duration: 1.3, x: 0, opacity: 1 });
 };
 
