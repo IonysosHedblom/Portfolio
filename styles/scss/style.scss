@@ -290,7 +290,7 @@ a {
 }
 
 .project-section {
-  margin: 25px 0 0 0;
+  padding: 50px 0 0 0;
 }
 
 .project-header {
@@ -510,7 +510,7 @@ a {
 }
 
 #contact {
-  height: 100vh;
+  height: 100%;
   position: relative;
   background-color: $primary-dark;
   overflow: hidden;
@@ -534,16 +534,15 @@ a {
   .row {
     max-width: 85%;
     position: relative;
-    margin: 100px auto;
+    margin: 60px auto;
 
     .contact-form {
-      margin: 10px 0;
       width: 40vw;
 
       .form-header {
         color: $secondary-blue;
         font-size: 1.8rem;
-        margin: 40px 110px;
+        margin: 30px 110px;
       }
 
       label {
@@ -614,13 +613,42 @@ a {
   }
 
   .madeby {
-    color: $primary-light;
+    color: #949ba7fd;
     text-align: center;
-    bottom: 200px;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    position: absolute;
+    .highlight {
+      color: $primary-red;
+    }
   }
 }
 
 // Media queries
+
+@media (max-width: 1170px) {
+  #about {
+    .row {
+      .column-stack {
+        display: none;
+      }
+    }
+  }
+
+  #contact {
+    .row {
+      .contact-social {
+        flex-direction: column;
+        top: 82px;
+        left: 90%;
+        .social-link {
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+}
 
 @media (max-width: 1300px) {
   #about {
@@ -662,6 +690,14 @@ a {
       }
       .skills {
         left: 1330px;
+      }
+    }
+  }
+
+  #contact {
+    .row {
+      .contact-form {
+        margin: 0 0 0 300px;
       }
     }
   }
@@ -762,6 +798,37 @@ a {
       .column-stack {
         display: none;
         position: relative;
+      }
+    }
+  }
+
+  #contact {
+    height: 100%;
+    .row {
+      max-width: 100%;
+      margin: 0 auto;
+      .contact-form {
+        text-align: center;
+        width: 100%;
+        .form-header {
+          margin: 30px 0;
+          text-align: center;
+        }
+        input[type='text'],
+        input[type='email'],
+        textarea {
+          padding: 10px 15px;
+          margin: 10px auto 30px auto;
+          width: 80%;
+        }
+
+        .btn-contact {
+          margin: 0 0 50px 0;
+        }
+      }
+
+      .contact-social {
+        display: none;
       }
     }
   }

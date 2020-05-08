@@ -6,6 +6,8 @@ import {
   aboutBarSlide,
   aboutHeaderSlide,
   hexSlide,
+  scrollHome,
+  scrollToProject,
 } from './gsap.js';
 
 // GSAP Animations on project section
@@ -61,10 +63,22 @@ $(window).scroll(() => {
   }
 });
 
-// Scroll on click
+// Scroll to project section
 $('.btn').click(function (event) {
   event.preventDefault();
   scrollTo();
+});
+
+// Scroll to project section with navlink
+$('.list-project').click(event => {
+  event.preventDefault();
+  scrollToProject();
+});
+
+// Scroll back home
+$('.home').click(event => {
+  event.preventDefault();
+  scrollHome();
 });
 
 // Nav position

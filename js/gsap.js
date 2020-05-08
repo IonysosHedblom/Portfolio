@@ -8,8 +8,19 @@ export const titleSlide = () => {
   gsap.to('.project-header', { duration: 1.3, x: 0, opacity: 1 });
 };
 
+// Scroll back home
+export const scrollHome = () => {
+  gsap.to(window, { duration: 0.7, scrollTo: '#home' });
+};
+
+// Scroll to project section
 export const scrollTo = () => {
   gsap.to(window, { duration: 0.7, scrollTo: '.navigation' });
+};
+
+// Scroll to project with navlink
+export const scrollToProject = () => {
+  gsap.to(window, { duration: 0.7, scrollTo: '#project' });
 };
 
 // About section header animations
