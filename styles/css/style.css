@@ -563,7 +563,9 @@ a {
 }
 
 #contact .row .contact-form {
-  margin: 50px 90px;
+  position: absolute;
+  right: 60%;
+  margin: 50px 0;
 }
 
 #contact .row .contact-form .form-header {
@@ -592,7 +594,7 @@ a {
 }
 
 #contact .row .contact-form .btn-contact {
-  margin: 10px 0 0 120px;
+  margin: 10px 0 0 125px;
   font-size: 1.3rem;
   padding: 10px 30px;
   color: #e2e2e2;
@@ -618,6 +620,36 @@ a {
 
 #contact .row .contact-form #success.expand {
   height: 36px;
+}
+
+#contact .row .contact-social {
+  position: absolute;
+  top: 210px;
+  left: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  text-align: center;
+}
+
+#contact .row .contact-social .social-link {
+  cursor: pointer;
+  width: 90px;
+  height: 90px;
+  margin: 0 40px;
+  background: #343d49fd;
+  font-size: 2.1rem;
+}
+
+#contact .row .contact-social i {
+  margin: 30px 0 0 0;
+}
+
+#contact .madeby {
+  color: #e2e2e2;
+  text-align: center;
+  bottom: 0;
 }
 
 @media (max-width: 1300px) {
