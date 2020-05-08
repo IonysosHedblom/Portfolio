@@ -5,9 +5,19 @@ import {
   cardSlide,
   aboutBarSlide,
   aboutHeaderSlide,
+  leftSlide,
+  rightSlide,
+  secAboutSlide,
+  skillSlide,
   hexSlide,
   scrollHome,
   scrollToProject,
+  scrollToAbout,
+  scrollToContact,
+  contactBarSlide,
+  contactHeaderSlide,
+  formSlide,
+  socialSlide,
 } from './gsap.js';
 
 // GSAP Animations on project section
@@ -22,6 +32,18 @@ const gsapSlides = () => {
 const sliding = () => {
   aboutBarSlide();
   aboutHeaderSlide();
+  secAboutSlide();
+  leftSlide();
+  rightSlide();
+  skillSlide();
+};
+
+// GSAP animations on contact section
+const contactSlides = () => {
+  contactBarSlide();
+  contactHeaderSlide();
+  formSlide();
+  socialSlide();
 };
 
 // Active links
@@ -35,16 +57,23 @@ const activeLink = anchor => {
 // Projects animation on scroll
 const projects = $('.projects');
 const about = $('.about');
+const contact = $('.contact');
 let triggeredProject = false;
 let triggeredAbout = false;
+let triggeredContact = false;
 
 $(window).scroll(() => {
   const docViewTop = $(window).scrollTop();
   const docViewBottom = docViewTop + $(window).height();
+
   const elemTop = $(projects).offset().top;
   const elemBottom = elemTop + $(projects).height();
+
   const aboutTop = $(about).offset().top;
   const aboutBottom = aboutTop + $(about).height();
+
+  const contactTop = $(contact).offset().top;
+  const contactBottom = contactTop + $(contact).height();
   if (
     !triggeredProject &&
     elemBottom <= docViewBottom &&
@@ -60,6 +89,14 @@ $(window).scroll(() => {
   ) {
     sliding();
     triggeredAbout = true;
+  }
+  if (
+    !triggeredContact &&
+    contactBottom <= docViewBottom &&
+    contactTop >= docViewTop
+  ) {
+    contactSlides();
+    triggeredContact = true;
   }
 });
 
@@ -79,6 +116,18 @@ $('.list-project').click(event => {
 $('.home').click(event => {
   event.preventDefault();
   scrollHome();
+});
+
+// Scroll to about section with navlink
+$('.list-about').click(event => {
+  event.preventDefault();
+  scrollToAbout();
+});
+
+// Scroll to contact section with navlink
+$('.list-contact').click(event => {
+  event.preventDefault();
+  scrollToContact();
 });
 
 // Nav position
@@ -121,3 +170,24 @@ const clearMix = () => {
     $('#gallery').removeClass('waypoint');
   }, 2000);
 };
+
+// Send form to email
+$('#contact-form').submit(event => {
+  event.preventDefault();
+
+  $.ajax({
+    url: 'https://formspree.io/xjvavnzv',
+    method: 'POST',
+    data: { message: $('form').serialize() },
+    dataType: 'json',
+  }).done(response => {
+    $('#success').addClass('expand');
+    $('#contact-form')
+      .find('input[type=text], input[type=email], textarea')
+      .val('');
+  });
+});
+
+$('#close').click(() => {
+  $('#success').removeClass('expand');
+});

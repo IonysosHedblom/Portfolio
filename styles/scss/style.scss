@@ -17,6 +17,18 @@ $primary-light: #e2e2e2;
   left: $left;
   position: $pos;
 }
+@keyframes toBottomFromTop {
+  49% {
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
 
 * {
   margin: 0;
@@ -416,7 +428,7 @@ a {
   overflow: hidden;
 
   .about-section {
-    padding: 25px 0 0 0;
+    padding: 50px 0 0 0;
   }
 
   .about-header {
@@ -437,16 +449,17 @@ a {
   }
 
   .header-secondary {
-    margin: 70px 90px;
+    margin: 50px 90px;
     font-size: 1.6rem;
     font-weight: 400;
     letter-spacing: 0.5px;
     color: #1b242fee;
+    opacity: 0;
   }
 
   .row {
     max-width: 85%;
-    margin: 70px auto;
+    margin: 60px auto;
     position: relative;
 
     .column {
@@ -492,7 +505,7 @@ a {
 
       .skills-header {
         font-size: 1.6rem;
-        margin: 10px 0;
+        margin: 30px 0;
         color: $secondary-dark;
       }
 
@@ -561,6 +574,10 @@ a {
         background-color: #343d49fd;
         color: $primary-light;
         font-size: 1rem;
+
+        &:focus {
+          border: 0.05rem solid $secondary-blue;
+        }
       }
       .btn-contact {
         margin: 10px 0 0 125px;
@@ -579,15 +596,34 @@ a {
       }
 
       #success {
+        width: 60%;
         height: 0;
-        width: 100%;
-        overflow: hidden;
         position: relative;
         transition: height 0.25s;
+        opacity: 0;
+        div {
+          color: #157c59;
+          font-weight: 600;
+          font-size: 1.1rem;
+          text-align: center;
+          padding: 5px 2px;
+          border: 0.2px solid #157c59;
+          margin-left: 35px;
+        }
 
         &.expand {
           height: 36px;
+          opacity: 1;
         }
+      }
+      #close {
+        position: absolute;
+        padding: 5px 15px;
+        font-size: 1.1rem;
+        left: 360px;
+        cursor: pointer;
+        color: white;
+        top: -15px;
       }
     }
     .contact-social {
@@ -604,6 +640,14 @@ a {
         margin: 0 40px;
         background: #343d49fd;
         font-size: 2.1rem;
+
+        &:hover {
+          background-color: $secondary-blue;
+        }
+
+        &:hover .fab {
+          animation: toBottomFromTop 0.3s forwards;
+        }
       }
 
       i {

@@ -1,3 +1,33 @@
+@-webkit-keyframes toBottomFromTop {
+  49% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+
+@keyframes toBottomFromTop {
+  49% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -441,7 +471,7 @@ a {
 }
 
 #about .about-section {
-  padding: 25px 0 0 0;
+  padding: 50px 0 0 0;
 }
 
 #about .about-header {
@@ -462,16 +492,17 @@ a {
 }
 
 #about .header-secondary {
-  margin: 70px 90px;
+  margin: 50px 90px;
   font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 0.5px;
   color: #1b242fee;
+  opacity: 0;
 }
 
 #about .row {
   max-width: 85%;
-  margin: 70px auto;
+  margin: 60px auto;
   position: relative;
 }
 
@@ -521,7 +552,7 @@ a {
 
 #about .row .skills .skills-header {
   font-size: 1.6rem;
-  margin: 10px 0;
+  margin: 30px 0;
   color: #1b242fb0;
 }
 
@@ -593,6 +624,12 @@ a {
   font-size: 1rem;
 }
 
+#contact .row .contact-form input[type='text']:focus,
+#contact .row .contact-form input[type='email']:focus,
+#contact .row .contact-form textarea:focus {
+  border: 0.05rem solid #3db5c5;
+}
+
 #contact .row .contact-form .btn-contact {
   margin: 10px 0 0 125px;
   font-size: 1.3rem;
@@ -610,16 +647,37 @@ a {
 }
 
 #contact .row .contact-form #success {
+  width: 60%;
   height: 0;
-  width: 100%;
-  overflow: hidden;
   position: relative;
   -webkit-transition: height 0.25s;
   transition: height 0.25s;
+  opacity: 0;
+}
+
+#contact .row .contact-form #success div {
+  color: #157c59;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 5px 2px;
+  border: 0.2px solid #157c59;
+  margin-left: 35px;
 }
 
 #contact .row .contact-form #success.expand {
   height: 36px;
+  opacity: 1;
+}
+
+#contact .row .contact-form #close {
+  position: absolute;
+  padding: 5px 15px;
+  font-size: 1.1rem;
+  left: 360px;
+  cursor: pointer;
+  color: white;
+  top: -15px;
 }
 
 #contact .row .contact-social {
@@ -640,6 +698,15 @@ a {
   margin: 0 40px;
   background: #343d49fd;
   font-size: 2.1rem;
+}
+
+#contact .row .contact-social .social-link:hover {
+  background-color: #3db5c5;
+}
+
+#contact .row .contact-social .social-link:hover .fab {
+  -webkit-animation: toBottomFromTop 0.3s forwards;
+          animation: toBottomFromTop 0.3s forwards;
 }
 
 #contact .row .contact-social i {
