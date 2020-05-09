@@ -56,7 +56,7 @@ const activeLink = anchor => {
 
 // Projects animation on scroll
 const projects = $('.projects');
-const about = $('.about');
+const about = $('.header-secondary');
 const contact = $('.contact');
 let triggeredProject = false;
 let triggeredAbout = false;
