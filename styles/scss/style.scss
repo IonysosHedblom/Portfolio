@@ -264,7 +264,7 @@ a {
 // Projects showcase
 
 #project {
-  height: 100vh;
+  height: 100%;
   position: relative;
   margin-bottom: 50px;
 
@@ -374,7 +374,7 @@ a {
       margin: 0 40px;
       height: 36vh;
       max-width: 100%;
-      width: calc(27vw - 10px);
+      width: calc(30vw - 10px);
       cursor: pointer;
       transition: opacity 0.5s;
       border-radius: 0.4em;
@@ -417,6 +417,11 @@ a {
 
   #tail {
     background-image: url('../../img/gallery/thumb-3.jpg');
+    background-size: 100% 100%;
+  }
+
+  #wouldyou {
+    background-image: url('../../img/gallery/thumb-4.png');
     background-size: 100% 100%;
   }
 }
@@ -826,7 +831,7 @@ a {
     margin: 0 auto;
   }
   #gallery .mix .card {
-    width: 65vw;
+    width: 66vw;
     height: 25vh;
   }
 
@@ -885,7 +890,7 @@ a {
 }
 
 // Ipad and ipad pro
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (min-width: 415px) {
   .flex {
     .row {
       flex-direction: column;
