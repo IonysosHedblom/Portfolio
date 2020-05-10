@@ -391,8 +391,7 @@ a {
       transition: all 0.3s ease-in-out;
     }
 
-    &:hover,
-    &:active {
+    &:hover {
       .card {
         opacity: 0.2;
       }
@@ -900,6 +899,10 @@ a {
 
         .btn-contact {
           margin: 0 0 50px 0;
+        }
+
+        #success {
+          margin: 0 0 50px 45px;
         }
       }
 
