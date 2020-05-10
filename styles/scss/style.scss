@@ -391,7 +391,8 @@ a {
       transition: all 0.3s ease-in-out;
     }
 
-    &:hover {
+    &:hover,
+    &:active {
       .card {
         opacity: 0.2;
       }
@@ -812,6 +813,18 @@ a {
 
 // Iphones and androids
 @media screen and (max-width: 414px) {
+  body {
+    width: 100%;
+  }
+  .navigation {
+    width: 100%;
+    .nav-links {
+      justify-content: center;
+      .nav-item {
+        padding: 5px 9px;
+      }
+    }
+  }
   #project {
     height: 100%;
     .flex.row-gt-sm {
