@@ -61,13 +61,13 @@ export const contactHeaderSlide = () => {
 export const cardSlide = () => {
   gsap
     .timeline()
-    .from('#gallery .mix', { stagger: 0.2, y: 500, duration: 0.8, opacity: 0 });
+    .from('#gallery .mix', { stagger: 0.2, y: 500, duration: 1.3, opacity: 0 });
 };
 
 export const hexSlide = () => {
   gsap.timeline().from('.label-wrap .bullet-wrap', {
-    stagger: 0.2,
-    x: -220,
+    stagger: 0.3,
+    x: -250,
     duration: 1,
     opacity: 0,
   });
@@ -99,7 +99,7 @@ export const rightSlide = () => {
 
 export const skillSlide = () => {
   gsap.timeline().from('.skills .skill-item', {
-    stagger: 0.05,
+    stagger: 0.1,
     x: 230,
     duration: 1,
     opacity: 0,
